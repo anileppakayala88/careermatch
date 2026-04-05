@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerMatch — AI Job Search Toolkit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">CareerMatch</div>
+        <span class="badge">Free · No Sign-Up</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- API Key Bar -->
+    <div class="api-key-bar">
+      <label for="apiKey">Anthropic API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-ant-api..." autocomplete="off" />
+      <span id="keyStatus" class="key-status">not set</span>
+      <a href="https://console.anthropic.com" target="_blank" class="key-link">Get a key →</a>
+    </div>
+
+    <!-- Tabs -->
+    <nav class="tabs" role="tablist">
+      <button class="tab active" role="tab" data-tab="ats">ATS Scorer</button>
+      <button class="tab" role="tab" data-tab="prompts">AI Prompts</button>
+      <button class="tab" role="tab" data-tab="salary">Salary Guide</button>
+      <button class="tab" role="tab" data-tab="interview">Interview Prep</button>
+      <button class="tab" role="tab" data-tab="workflow">Workflow</button>
+    </nav>
+
+    <!-- Panels -->
+    <div id="panel-ats"       class="panel active"></div>
+    <div id="panel-prompts"   class="panel"></div>
+    <div id="panel-salary"    class="panel"></div>
+    <div id="panel-interview" class="panel"></div>
+    <div id="panel-workflow"  class="panel"></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>CareerMatch — Free, open source job search toolkit. No data collected. No sign-up required.</p>
+      <p><a href="https://claude.ai" target="_blank">Claude.ai</a> · <a href="https://chatgpt.com" target="_blank">ChatGPT</a> · <a href="https://github.com" target="_blank">View on GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Data -->
+  <script src="data/industries.js"></script>
+  <script src="data/prompts.js"></script>
+  <script src="data/salary.js"></script>
+  <script src="data/interview.js"></script>
+
+  <!-- Modules -->
+  <script src="js/api.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/ats.js"></script>
+  <script src="js/promptsPanel.js"></script>
+  <script src="js/salaryPanel.js"></script>
+  <script src="js/interviewPanel.js"></script>
+  <script src="js/workflowPanel.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
