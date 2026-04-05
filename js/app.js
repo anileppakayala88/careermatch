@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Tabs.onFirstActivate('salary',    () => SalaryPanel.render());
   Tabs.onFirstActivate('interview', () => InterviewPanel.render());
   Tabs.onFirstActivate('workflow',  () => WorkflowPanel.render());
+  Tabs.onFirstActivate('tracker',   () => TrackerPanel.render());
 
   // --- Initialize tab switching ---
   Tabs.init();

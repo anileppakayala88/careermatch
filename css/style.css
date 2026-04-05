@@ -385,6 +385,88 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* ─── Tracker ───────────────────────────────────────────────── */
+.tracker-form-card { margin-bottom: 1.25rem; }
+
+.grid-3-tracker { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+.tracker-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+.tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.tracker-table thead tr {
+  border-bottom: 1px solid var(--color-border);
+}
+.tracker-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-hint);
+  white-space: nowrap;
+}
+.tracker-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.tracker-table tbody tr:last-child td { border-bottom: none; }
+.tracker-table tbody tr:hover { background: var(--color-bg-soft); }
+
+.tracker-empty {
+  text-align: center;
+  color: var(--color-text-hint);
+  font-size: 13px;
+  padding: 2rem !important;
+}
+
+.tracker-score {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+.tracker-score.score-high { background: var(--color-green-bg); color: var(--color-green); }
+.tracker-score.score-mid  { background: var(--color-amber-bg); color: var(--color-amber); }
+.tracker-score.score-low  { background: var(--color-red-bg);   color: var(--color-red); }
+.tracker-score-na { color: var(--color-text-hint); }
+
+.tracker-status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--color-bg-muted);
+  color: var(--color-text-sub);
+  white-space: nowrap;
+}
+.tracker-status-offer     { background: var(--color-green-bg); color: var(--color-green); }
+.tracker-status-rejected  { background: var(--color-red-bg);   color: var(--color-red); }
+.tracker-status-interview { background: var(--color-amber-bg); color: var(--color-amber); }
+
+.tracker-del-btn {
+  padding: 4px 9px;
+  font-size: 12px;
+  color: var(--color-text-hint);
+  border-color: transparent;
+}
+.tracker-del-btn:hover { color: var(--color-red); background: var(--color-red-bg); }
+
+@media (max-width: 600px) {
+  .grid-3-tracker { grid-template-columns: 1fr; }
+}
+
 /* ─── Footer ────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--color-border);
